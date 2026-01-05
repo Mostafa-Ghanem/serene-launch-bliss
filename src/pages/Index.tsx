@@ -22,7 +22,7 @@ const Index = () => {
 
   return (
     <main 
-      className="relative min-h-screen w-full overflow-hidden font-tajawal"
+      className="relative min-h-screen w-full overflow-hidden"
       dir="rtl"
     >
       {/* Background Image */}
@@ -94,12 +94,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="w-full text-center pt-6">
-          <p className="text-sm text-muted-foreground/70">
-            حقوق الطبع شرفات الحرم | شرفات الحرم | {new Date().getFullYear()}.
-          </p>
-        </footer>
       </div>
     </main>
   );
