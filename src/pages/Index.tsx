@@ -27,77 +27,77 @@ const Index = () => {
     >
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
       
-      {/* Dark Overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-overlay/80 via-overlay/70 to-overlay/90" />
+      {/* Dark Overlay with gradient - matching reference dark teal/green tone */}
+      <div className="absolute inset-0 bg-gradient-to-b from-overlay/85 via-overlay/75 to-overlay/95" />
       
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-12">
-        {/* Logo */}
-        <div className="animate-fade-in-up mb-8">
-          <img 
-            src={logoWhite} 
-            alt="شرفات الحرم" 
-            className="h-32 md:h-44 w-auto drop-shadow-2xl"
-          />
-        </div>
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-between px-4 py-8 md:py-12">
+        
+        {/* Main Content Container */}
+        <div className="flex-1 flex flex-col items-center justify-center w-full max-w-lg">
+          
+          {/* Logo */}
+          <div className="animate-fade-in-up mb-6 md:mb-10">
+            <img 
+              src={logoWhite} 
+              alt="شرفات الحرم" 
+              className="h-28 md:h-40 w-auto drop-shadow-2xl"
+            />
+          </div>
 
-        {/* Heading */}
-        <div className="text-center mb-8 animate-fade-in-up-delay-1">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
-            قريباً <span className="shimmer-text">جداً</span>
-          </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto" />
-        </div>
+          {/* Heading - Large Gold Text */}
+          <div className="text-center mb-6 md:mb-8 animate-fade-in-up-delay-1">
+            <h1 className="text-5xl md:text-7xl font-bold text-gold mb-2 tracking-wide">
+              قريباً جداً
+            </h1>
+          </div>
 
-        {/* Tagline */}
-        <div className="text-center mb-12 animate-fade-in-up-delay-2 max-w-2xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-gold mb-4">
-            مزاد شرفات الحرم
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            نافذتك على جوارٍ رابحٍ يُعتز به
-          </p>
-        </div>
-
-        {/* Form Card */}
-        <div className="w-full max-w-lg animate-fade-in-up-delay-3">
-          <div className="relative backdrop-blur-md bg-card/30 border border-border/30 rounded-2xl p-6 md:p-8 shadow-2xl">
-            {/* Gold accent line */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-gold to-transparent rounded-full" />
-            
-            <h2 className="text-xl font-semibold text-foreground text-center mb-4">
-              كن أول من يعلم
+          {/* Tagline */}
+          <div className="text-center mb-8 md:mb-12 animate-fade-in-up-delay-2 max-w-md px-4">
+            <h2 className="text-xl md:text-2xl font-medium text-gold mb-3">
+              مزاد شرفات الحرم
             </h2>
-            
-            {/* Tally Form Embed */}
-            <div className="tally-embed-container">
-              <iframe
-                data-tally-src="https://tally.so/embed/A72650?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                loading="lazy"
-                width="100%"
-                height="168"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                title="مزاد شرفات الحرم"
-                className="w-full"
-              />
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              نافذتك على جوارٍ رابحٍ يُعتز به
+            </p>
+          </div>
+
+          {/* Form Card - Matching Reference Style */}
+          <div className="w-full animate-fade-in-up-delay-3">
+            <div className="relative backdrop-blur-sm bg-card/20 border border-gold/30 rounded-xl p-5 md:p-6 shadow-xl">
+              {/* Gold accent line at top */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent rounded-full" />
+              
+              <h3 className="text-lg md:text-xl font-semibold text-foreground text-center mb-5">
+                كن أول من يعلم
+              </h3>
+              
+              {/* Tally Form Embed */}
+              <div className="tally-embed-container">
+                <iframe
+                  data-tally-src="https://tally.so/embed/A72650?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy"
+                  width="100%"
+                  height="168"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="مزاد شرفات الحرم"
+                  className="w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <footer className="absolute bottom-6 left-0 right-0 text-center">
-          <p className="text-sm text-muted-foreground/60">
-            © {new Date().getFullYear()} شرفات الحرم. جميع الحقوق محفوظة.
+        <footer className="w-full text-center pt-6">
+          <p className="text-sm text-muted-foreground/70">
+            حقوق الطبع شرفات الحرم | شرفات الحرم | {new Date().getFullYear()}.
           </p>
         </footer>
       </div>
