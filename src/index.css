@@ -74,6 +74,11 @@
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* Tally form input styling */
+  .tally-embed-container {
+    --tally-text-color: white;
+  }
 }
 
 /* Animations */
