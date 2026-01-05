@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         tajawal: ['Tajawal', 'sans-serif'],
+        'sf-vision': ['SF Vision', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
