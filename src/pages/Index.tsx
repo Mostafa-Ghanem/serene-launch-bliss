@@ -50,17 +50,22 @@ const Index = () => {
         </div>
 
         {/* Heading */}
-        <div className="text-center mb-6 animate-fade-in-up-delay-1">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-3">
+        <div className="text-center mb-8 animate-fade-in-up-delay-1">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
             قريباً <span className="shimmer-text">جداً</span>
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto" />
+          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto" />
         </div>
 
-        {/* Subtitle */}
-        <p className="text-lg md:text-xl text-muted-foreground text-center max-w-md mb-10 animate-fade-in-up-delay-2">
-          نعمل على إطلاق تجربة استثنائية. سجّل الآن ليصلك كل جديد.
-        </p>
+        {/* Tagline */}
+        <div className="text-center mb-12 animate-fade-in-up-delay-2 max-w-2xl">
+          <h2 className="text-2xl md:text-4xl font-bold text-gold mb-4">
+            مزاد شرفات الحرم
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            نافذتك على جوارٍ رابحٍ يُعتز به
+          </p>
+        </div>
 
         {/* Form Card */}
         <div className="w-full max-w-lg animate-fade-in-up-delay-3">
