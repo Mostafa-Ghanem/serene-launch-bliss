@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import backgroundImage from "@/assets/background.webp";
 import logoWhite from "@/assets/logo-white.webp";
-
 const Index = () => {
   useEffect(() => {
     // Load Tally embed script
@@ -14,22 +13,15 @@ const Index = () => {
       }
     };
     document.body.appendChild(script);
-
     return () => {
       document.body.removeChild(script);
     };
   }, []);
-
-  return (
-    <main 
-      className="relative min-h-screen w-full overflow-hidden"
-      dir="rtl"
-    >
+  return <main className="relative min-h-screen w-full overflow-hidden" dir="rtl">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105" style={{
+      backgroundImage: `url(${backgroundImage})`
+    }} />
       
       {/* Dark Overlay with gradient - matching reference dark teal/green tone */}
       <div className="absolute inset-0 bg-gradient-to-b from-overlay/85 via-overlay/75 to-overlay/95" />
@@ -42,11 +34,7 @@ const Index = () => {
           
           {/* Logo */}
           <div className="animate-fade-in-up mb-6 md:mb-10">
-            <img 
-              src={logoWhite} 
-              alt="شرفات الحرم" 
-              className="h-28 md:h-40 w-auto drop-shadow-2xl"
-            />
+            <img src={logoWhite} alt="شرفات الحرم" className="h-28 md:h-40 w-auto drop-shadow-2xl" />
           </div>
 
           {/* Heading - Large Gold Text */}
@@ -58,9 +46,7 @@ const Index = () => {
 
           {/* Tagline */}
           <div className="text-center mb-8 md:mb-12 animate-fade-in-up-delay-2 max-w-md px-4">
-            <h2 className="text-xl md:text-2xl font-medium text-gold mb-3">
-              مزاد شرفات الحرم
-            </h2>
+            <h2 className="text-xl md:text-2xl font-medium text-gold mb-3">مخطط شرفات الحرم</h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               نافذتك على جوارٍ رابحٍ يُعتز به
             </p>
@@ -78,25 +64,13 @@ const Index = () => {
               
               {/* Tally Form Embed */}
               <div className="tally-embed-container">
-                <iframe
-                  data-tally-src="https://tally.so/embed/A72650?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                  loading="lazy"
-                  width="100%"
-                  height="168"
-                  frameBorder="0"
-                  marginHeight={0}
-                  marginWidth={0}
-                  title="مزاد شرفات الحرم"
-                  className="w-full"
-                />
+                <iframe data-tally-src="https://tally.so/embed/A72650?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="168" frameBorder="0" marginHeight={0} marginWidth={0} title="مزاد شرفات الحرم" className="w-full" />
               </div>
             </div>
           </div>
         </div>
 
       </div>
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
